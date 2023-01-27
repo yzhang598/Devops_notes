@@ -43,6 +43,6 @@ A type of reverse proxies. Distrubute the traffic and balance the load. Repica L
 
 #### Reading
 
-Paper: Maglev
+- Paper: Maglev
 
-Open source: Nginx
+- Open source: Nginx
