@@ -1,4 +1,4 @@
-# DevOps Q & A
+# DevOps Q&A
 
 
 
