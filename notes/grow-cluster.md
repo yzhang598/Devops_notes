@@ -63,7 +63,7 @@ ubuntu-node2   Ready    <none>          4m28s   v1.24.1
 
 
 
-**CMDs for management **
+**CMDs for management**
 
 ```bash
 kubectl get nodes/pods/service  
