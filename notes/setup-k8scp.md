@@ -97,7 +97,7 @@ OK
 apt install containerd -y
 ```
 
-Also contained.io is needed:
+Also containerd.io is needed:
 
 https://github.com/containerd/containerd/blob/main/docs/getting-started.md
 
@@ -261,7 +261,7 @@ rm /etc/containerd/config.toml
 systemctl restart containerd
 ```
 
-- The connection to the server :6443 was refused (after restart)
+- The connection to the server: 6443 was refused (after restart)
 
 ```bash
 sudo -i
@@ -270,7 +270,7 @@ exit
 strace -eopenat kubectl version
 ```
 
-- Always check the log
+- Always check the logs
 
 ```bash
 journalctl -xeu kubelet
