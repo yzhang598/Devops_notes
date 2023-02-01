@@ -61,12 +61,26 @@ ubuntu-node1   Ready    control-plane   10h     v1.24.1
 ubuntu-node2   Ready    <none>          4m28s   v1.24.1
 ```
 
+**Containerd may still be using an out of date notation for the runtime-endpoint**. You may see errors about an undeclared
+
+resource type such as *unix*//:. We will update the crictl configuration. There are many possible configuration
+
+options. We will set one, and view the configuration file that is created.
+
+```bash
+sudo crictl config --set \
+runtime-endpoint=unix:///run/containerd/containerd.sock \
+--set image-endpoint=unix:///run/containerd/containerd.sock
+sudo cat /etc/crictl.yaml
+```
+
 
 
 **CMDs for management**
 
 ```bash
-kubectl get nodes/pods/service  
+kubectl get nodes/pods/service
+kubectl get pods --all-namespaces
 
 kubectl create
 kubectl create deployment nginx-depl --image=nginx 
