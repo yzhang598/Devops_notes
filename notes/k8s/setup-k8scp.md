@@ -50,6 +50,7 @@ swapoff -a
 by default, the firewall is disabled. 
 
 ```bash
+systemctl stop ufw
 ufw disable
 Firewall stopped and disabled on system startup
 ```
@@ -74,7 +75,7 @@ net.ipv4.ip_forward = 1
 EOF
 ```
 
-Check 
+Check and apply
 
 ```bash
 sysctl --system
@@ -284,3 +285,23 @@ strace -eopenat kubectl version
 ```bash
 journalctl -xeu kubelet
 ```
+
+- The connection to the server localhost:8080
+
+For use with root user 
+
+```bash
+export KUBECONFIG=/etc/kubernetes/admin.conf
+```
+
+For regular user
+
+```bash
+exit
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+
+
