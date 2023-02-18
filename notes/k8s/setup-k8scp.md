@@ -118,6 +118,11 @@ sudo apt-get update
 sudo apt-get install containerd.io
 ```
 
+```
+```
+
+
+
 ### K8s
 
 ```bash
@@ -155,7 +160,7 @@ apt-mark hold kubelet kubeadm kubectl
 ```
 
 ```bash
-wget https://docs.projectcalico.org/manifests/calico.yaml
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml -O
 ```
 
 ```bash
