@@ -166,10 +166,6 @@ curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/ca
 ```
 
 ```bash
-kubectl apply -f calico.yaml
-```
-
-```bash
 less calico.yaml
 ```
 
