@@ -118,7 +118,9 @@ sudo apt-get update
 sudo apt-get install containerd.io
 ```
 
-```
+```bash
+rm /etc/containerd/config.toml
+systemctl restart containerd
 ```
 
 
@@ -161,6 +163,10 @@ apt-mark hold kubelet kubeadm kubectl
 
 ```bash
 curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml -O
+```
+
+```bash
+kubectl apply -f calico.yaml
 ```
 
 ```bash
